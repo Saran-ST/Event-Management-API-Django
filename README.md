@@ -74,7 +74,7 @@ Below are screenshots showcasing the working features of the Event Management AP
 | **Feature**                                | **Screenshot**                                | 
 |--------------------------------------------|---------------------------------------------- |
 | Swagger UI - Interactive API Docs          | screenshots/swagger_UI-overview[1].png        |
-| GET /api/events/ - List all events         | screenshots/get-event-with-eventid.png        |
+| GET /api/events/{id} - List all events     | screenshots/get-event-with-eventid.png        |
 | POST /api/events/ - Create a new event     | screenshots/create-event.png                  |
 | PUT /api/events/{id}/ - Update an event    | screenshots/update-event.png                  |
 | DELETE /api/events/{id}/ - Delete an event | screenshots/delete-event.png                  |
