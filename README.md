@@ -12,12 +12,15 @@ It also includes features for RSVP management, user reviews, and JWT authenticat
 * Built-in Swagger UI and ReDoc documentation
 * Access to Django Admin for backend data management
   
-**# Tech Stack**
-**Component**             **Technology**
-Backend	                  Django, Django REST Framework
-Authentication	          JWT (via rest_framework_simplejwt)
-Documentation	            Swagger & ReDoc (via drf-yasg)
-Database	                SQLite (default and lightweight)
+## 🧩 Tech Stack
+-----------------------------------------------------------------
+| Component          | Technology                               |
+|--------------------|------------------------------------------|
+| **Backend**        | Django, Django REST Framework            |
+| **Authentication** | JWT (via `rest_framework_simplejwt`)     |
+| **Documentation**  | Swagger & ReDoc (via `drf-yasg`)         |
+| **Database**       | SQLite (default and lightweight)         |
+-----------------------------------------------------------------
 
 **⚙️ Setup Instructions**
 
@@ -50,13 +53,16 @@ http://127.0.0.1:8000/swagger/     — Swagger UI
 
 http://127.0.0.1:8000/redoc/       — ReDoc
 
-🌐 API Endpoints
-**Endpoint**                **Method**	               **Description**
-/api/events/	              GET / POST	               List all events or create a new event
-/api/events/{id}/         	GET / PUT / DELETE	       Retrieve, update, or delete an event
-/api/rsvps/	                GET / POST	               View or create RSVP entries
-/api/reviews/             	GET / POST	               View or add reviews for an event
-/api/token/	                POST	                     Obtain JWT authentication token
-/api/token/refresh/	        POST	                     Refresh JWT access token
-/swagger/	                  -	                         Interactive Swagger documentation
-/redoc/	                    -	                         ReDoc documentation page
+## 🌐 API Endpoints
+--------------------------------------------------------------------------------------------------
+| **Endpoint**           | **Method**              | **Description**                             |
+|------------------------|------------------------|----------------------------------------------|
+| /api/events/           | GET / POST             | List all events or create a new event        |
+| /api/events/{id}/      | GET / PUT / DELETE     | Retrieve, update, or delete an event         |
+| /api/rsvps/            | GET / POST             | View or create RSVP entries                  |
+| /api/reviews/          | GET / POST             | View or add reviews for an event             |
+| /api/token/            | POST                   | Obtain JWT authentication token              |
+| /api/token/refresh/    | POST                   | Refresh JWT access token                     |
+| /swagger/              | -                      | Interactive Swagger documentation            |
+| /redoc/                | -                      | ReDoc documentation page                     |
+--------------------------------------------------------------------------------------------------
