@@ -24,7 +24,7 @@ Database	                SQLite (default and lightweight)
 Follow these steps to set up and run the project locally:
 
 1️⃣ Clone the repository
-git clone https://github.com/YOUR-USERNAME/event-management-assignment.git
+git clone [https://github.com/YOUR-USERNAME/event-management-assignment.git](https://github.com/Saran-ST/Event-Management-API-Django)
 cd event-management-assignment
 
 2️⃣ Create and activate a virtual environment
