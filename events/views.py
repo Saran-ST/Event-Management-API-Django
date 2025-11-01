@@ -1,29 +1,40 @@
-from rest_framework import viewsets, permissions
+from rest_framework import generics, permissions
 from .models import Event, RSVP, Review
 from .serializers import EventSerializer, RSVPSerializer, ReviewSerializer
 
-class IsOrganizerOrReadOnly(permissions.BasePermission):
-    def has_object_permission(self, request, view, obj):
-        if request.method in permissions.SAFE_METHODS:
-            return True
-        return obj.organizer == request.user
 
-class EventViewSet(viewsets.ModelViewSet):
+# --- Event Views ---
+class EventListCreateView(generics.ListCreateAPIView):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOrganizerOrReadOnly]
-
-    def perform_create(self, serializer):
-        serializer.save(organizer=self.request.user)
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
-class RSVPViewSet(viewsets.ModelViewSet):
+class EventDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+# --- RSVP Views ---
+class RSVPListCreateView(generics.ListCreateAPIView):
     queryset = RSVP.objects.all()
     serializer_class = RSVPSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
-class ReviewViewSet(viewsets.ModelViewSet):
+# --- Review Views ---
+class ReviewListCreateView(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ReviewListCreateView(generics.ListCreateAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
+
+class RSVPListCreateView(generics.ListCreateAPIView):
+    queryset = RSVP.objects.all()
+    serializer_class = RSVPSerializer
+

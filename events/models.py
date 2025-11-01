@@ -26,7 +26,10 @@ class RSVP(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='rsvps')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rsvps')
     status = models.CharField(max_length=10, choices=STATUS_CHOICES)
-    created_at = models.DateTimeField(auto_now_add=True)  # ✅ add this line
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('event', 'user')  # ✅ Prevents duplicate RSVPs for the same event
 
     def __str__(self):
         return f"{self.user.username} - {self.status} for {self.event.title}"
@@ -38,6 +41,9 @@ class Review(models.Model):
     rating = models.IntegerField()
     comment = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('event', 'user')  # ✅ Prevents a user from reviewing the same event twice
 
     def __str__(self):
         return f"{self.user.username} review on {self.event.title}"
