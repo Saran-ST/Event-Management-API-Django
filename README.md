@@ -83,3 +83,10 @@ Below are screenshots showcasing the working features of the Event Management AP
 | JWT Authentication - Obtain Token          | screenshots/jwt_token.png                     |
 | ReDoc - Documentation of API               | screenshots/redoc-overview.png                |
 ----------------------------------------------------------------------------------------------
+
+💬 Author
+
+SARAN ST
+📧 stsaran2004@gmail.com
+
+🔗 https://github.com/Saran-ST
