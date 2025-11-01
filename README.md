@@ -66,3 +66,20 @@ http://127.0.0.1:8000/redoc/       — ReDoc
 | /swagger/              | -                      | Interactive Swagger documentation            |
 | /redoc/                | -                      | ReDoc documentation page                     |
 --------------------------------------------------------------------------------------------------
+
+## 🖼️ API Demonstration Screenshots  
+
+Below are screenshots showcasing the working features of the Event Management API using Swagger UI:
+----------------------------------------------------------------------------------------------
+| **Feature**                                | **Screenshot**                                | 
+|--------------------------------------------|---------------------------------------------- |
+| Swagger UI - Interactive API Docs          | screenshots/swagger_UI-overview[1].png        |
+| GET /api/events/ - List all events         | screenshots/get-event-with-eventid.png        |
+| POST /api/events/ - Create a new event     | screenshots/create-event.png                  |
+| PUT /api/events/{id}/ - Update an event    | screenshots/update-event.png                  |
+| DELETE /api/events/{id}/ - Delete an event | screenshots/delete-event.png                  |
+| POST /api/rsvps/ - Add a new RSVP          | screenshots/create-rsvp.png                   |
+| POST /api/reviews/ - Add a review          | screenshots/create-review.png                 |
+| JWT Authentication - Obtain Token          | screenshots/jwt_token.png                     |
+| ReDoc - Documentation of API               | screenshots/redoc-overview.png                |
+----------------------------------------------------------------------------------------------
